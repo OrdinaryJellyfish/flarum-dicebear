@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace OrdinaryJellyfish\\Dicebear;
+namespace OrdinaryJellyfish\Dicebear;
 
 use Flarum\Extend;
 

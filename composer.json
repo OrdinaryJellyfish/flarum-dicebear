@@ -24,11 +24,11 @@
     "extra": {
         "flarum-extension": {
             "title": "Dicebear",
-            "category": "",
+            "category": "avatars",
             "icon": {
-                "name": "",
-                "color": "",
-                "backgroundColor": ""
+                "name": "fas fa-grin-hearts",
+                "color": "#FFFFFF",
+                "backgroundColor": "#4B0082"
             }
         },
         "flarum-cli": {
