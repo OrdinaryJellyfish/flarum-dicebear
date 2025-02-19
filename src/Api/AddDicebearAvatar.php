@@ -17,19 +17,19 @@ use Flarum\User\User;
 
 class AddDicebearAvatar
 {
-  public SettingsRepositoryInterface $settings;
+    public SettingsRepositoryInterface $settings;
 
-  public function __construct(SettingsRepositoryInterface $settings)
-  {
-    $this->settings = $settings;
-  }
-
-  public function __invoke(BasicUserSerializer $serializer, User $user, array $attributes)
-  {
-    if (empty($attributes['avatarUrl'])) {
-      $attributes['avatarUrl'] = $this->settings->get('ordinaryjellyfish-dicebear.api_url').'/9.x/'.$this->settings->get('ordinaryjellyfish-dicebear.avatar_style').'/png?seed='.$user->username;
+    public function __construct(SettingsRepositoryInterface $settings)
+    {
+        $this->settings = $settings;
     }
 
-    return $attributes;
-  }
+    public function __invoke(BasicUserSerializer $serializer, User $user, array $attributes)
+    {
+        if (empty($attributes['avatarUrl'])) {
+            $attributes['avatarUrl'] = $this->settings->get('ordinaryjellyfish-dicebear.api_url').'/9.x/'.$this->settings->get('ordinaryjellyfish-dicebear.avatar_style').'/png?seed='.$user->username;
+        }
+
+        return $attributes;
+    }
 }
