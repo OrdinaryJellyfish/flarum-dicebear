@@ -20,8 +20,11 @@ php flarum migrate
 php flarum cache:clear
 ```
 
+## Screenshots
+![Profile](https://raw.githubusercontent.com/OrdinaryJellyfish/flarum-dicebear/refs/heads/main/screenshots/profile.png)
+
 ## Links
 
 - [Packagist](https://packagist.org/packages/ordinaryjellyfish/flarum-dicebear)
 - [GitHub](https://github.com/ordinaryjellyfish/flarum-dicebear)
-- [Discuss](https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE)
+- [Discuss](https://discuss.flarum.org/d/37046-dicebear-cool-default-avatars-for-your-forum)
