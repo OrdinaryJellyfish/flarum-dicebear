@@ -8,8 +8,7 @@ app.initializers.add('ordinaryjellyfish/flarum-dicebear', () => {
 
   const options = Object.keys(avatarOptions).reduce((acc: { [key: string]: string }, key) => {
     const kebabKey = toKebabCase(key);
-    const option = avatarOptions[key as keyof typeof avatarOptions];
-    acc[kebabKey] = option.meta.title || '';
+    acc[kebabKey] = app.translator.trans(`ordinaryjellyfish-dicebear.admin.avatar_style_options.${kebabKey}`).toString();
     return acc;
   }, {});
 
