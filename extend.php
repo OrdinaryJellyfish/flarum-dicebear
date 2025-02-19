@@ -12,13 +12,14 @@
 namespace OrdinaryJellyfish\Dicebear;
 
 use Flarum\Extend;
+use Flarum\Api\Serializer\BasicUserSerializer;
 
 return [
     (new Extend\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js'),
-        
-    new Extend\Locales(__DIR__.'/locale'),
 
-    (new Extend\Event())
-        ->listen(\Flarum\User\Event\Registered::class, Listener\CreateAvatar::class),
+    new Extend\Locales(__DIR__.'/locale'),
+    
+    (new Extend\ApiSerializer(BasicUserSerializer::class))
+        ->attributes(Api\AddDicebearAvatar::class),
 ];
